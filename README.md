@@ -5,10 +5,10 @@ This project provides an HTML/CSS template aimed at offering a simple and user-f
 ------------
 ## Features
 
-- **Category Navigation: ** Customers can easily switch between categories such as Soups, Main Courses, and Desserts.
+- **Category Navigation:** Customers can easily switch between categories such as Soups, Main Courses, and Desserts.
 - **Responsive Design:** Provides an optimized layout for mobile devices.
-- **Social Media Links: ** Enhanced user interaction with popular social media links like WhatsApp and Instagram.
-- **Modern and Simple Design: ** Offers a clean and easy-to-use interface.
+- **Social Media Links:** Enhanced user interaction with popular social media links like WhatsApp and Instagram.
+- **Modern and Simple Design:** Offers a clean and easy-to-use interface.
 
 
 ------------

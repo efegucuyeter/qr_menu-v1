@@ -3,7 +3,7 @@
 This project provides an HTML/CSS template aimed at offering a simple and user-friendly menu layout for restaurants. Customers can navigate between categories and view details of each menu item along with visuals.
 
 ------------
-
+## GIF
 ![ezgif-3-af5f4f77ec](https://github.com/user-attachments/assets/091461e7-a279-44fc-a645-d5d77176ba77)
 
 ------------

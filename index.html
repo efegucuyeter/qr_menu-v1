@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Menüsü</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF3E0; 
+            color: #333;
+        }
+
+        header {
+            background-color: #3E2723; 
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .category-selection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .category-selection div {
+            text-align: center;
+            cursor: pointer;
+            margin: 10px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .category-selection img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-section {
+            display: none;
+            padding: 20px;
+            min-height: calc(100vh - 180px);
+            box-sizing: border-box;
+        }
+
+        h2 {
+            border-bottom: 2px solid #FFF3E0; 
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .back-btn {
+            background-color: #3E2723;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #3E2723; 
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .social-media {
+            margin: 10px 0;
+        }
+
+        footer .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .social-media i {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .category-selection div {
+                flex: 1 1 100%;
+            }
+
+            ul li img {
+                max-width: 75px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test Restoran</h1>
+    </header>
+    <div class="category-selection">
+        <div onclick="showMenu('corbalar')">
+            <img src="img/corba.png" alt="Çorbalar">
+            <h1>Çorbalar</h1>
+        </div> 
+        <div onclick="showMenu('aperatifler')">
+            <img src="img/aperatif.png" alt="Aperatifler">
+            <h1>Aperatifler</h1>
+        </div>
+        <div onclick="showMenu('anayemekler')">
+            <img src="img/anayemek.png" alt="Ana Yemekler">
+            <h1>Ana Yemekler</h1>
+        </div>
+        <div onclick="showMenu('salatalar')">
+            <img src="img/salata.png" alt="Salatalar">
+            <h1>Salatalar</h1>
+        </div>
+        <div onclick="showMenu('icecekler')">
+            <img src="img/icecek.png" alt="İçecekler">
+            <h1>İçecekler</h1>
+        </div>
+        <div onclick="showMenu('tatlilar')">
+            <img src="img/tatlı.png" alt="Tatlılar">
+            <h1>Tatlılar</h1>
+        </div>        
+
+
+
+    </div>
+    <main> 
+        <section id="corbalar" class="menu-section">
+            <h2>Çorbalar</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Mercimek Çorbası">Mercimek Çorbası - 15 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Tarhana Çorbası">Tarhana Çorbası - 17 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Tavuk Çorbası">Tavuk Çorbası - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Ezogelin Çorbası">Ezogelin Çorbası - 16 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Düğün Çorbası">Düğün Çorbası - 20 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Sebze Çorbası">Sebze Çorbası - 18 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section>
+        <section id="anayemekler" class="menu-section">
+            <h2>Ana Yemekler</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Izgara Tavuk">Izgara Tavuk - 50 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Beşamel Soslu Makarna">Beşamel Soslu Makarna - 40 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Et Şiş">Et Şiş - 60 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Lahmacun">Lahmacun - 25 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Adana Kebap">Adana Kebap - 55 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Karışık Izgara">Karışık Izgara - 70 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Mantı">Mantı - 35 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Döner">Döner - 45 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section><section id="aperatifler" class="menu-section">
+            <h2>Aperatifler</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Patates Kızartması">Patates Kızartması - 15 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Sigara Böreği">Sigara Böreği - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Mozzarella Sticks">Mozzarella Sticks - 22 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Soğan Halkası">Soğan Halkası - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Humus">Humus - 20 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Acılı Ezme">Acılı Ezme - 15 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section>
+        <section id="tatlilar" class="menu-section">
+            <h2>Tatlılar</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Baklava">Baklava - 20 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Sütlaç">Sütlaç - 15 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Profiterol">Profiterol - 25 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Kazandibi">Kazandibi - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Şekerpare">Şekerpare - 15 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Tiramisu">Tiramisu - 22 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Dondurma">Dondurma - 10 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Revani">Revani - 18 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section>
+        <section id="icecekler" class="menu-section">
+            <h2>İçecekler</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Çay">Çay - 5 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Kahve">Kahve - 10 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Portakal Suyu">Portakal Suyu - 12 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Limonata">Limonata - 10 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Kola">Kola - 8 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Ayran">Ayran - 6 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Soda">Soda - 7 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Maden Suyu">Maden Suyu - 8 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section>
+        <section id="salatalar" class="menu-section">
+            <h2>Salatalar</h2>
+            <ul>
+                <li><img src="https://via.placeholder.com/100" alt="Çoban Salata">Çoban Salata - 20 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Mevsim Salata">Mevsim Salata - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Sezar Salata">Sezar Salata - 25 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Yoğurtlu Semizotu Salatası">Yoğurtlu Semizotu Salatası - 22 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Patates Salatası">Patates Salatası - 18 TL</li>
+                <li><img src="https://via.placeholder.com/100" alt="Piyaz">Piyaz - 20 TL</li>
+            </ul>
+            <button class="back-btn" onclick="showCategories()">Geri Dön</button>
+        </section>
+
+        
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://wa.me/your-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/your-instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>Site <a href="https://www.efegucyeter.com.tr" target="_blank" style="color: white;">Efe Gücüyeter</a> tarafından yapılmıştır</p>
+        <br>
+        <p>İletişim: <a href="mailto:efegcytr@gmail.com" style="color: white;">efegcytr@gmail.com</a></p>
+        <br>
+        <P>Telefon: 0536-927-80-42</P>
+    </footer>
+
+    <script>
+        function showMenu(category) {
+            document.querySelectorAll('.menu-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.querySelector('.category-selection').style.display = 'none';
+            document.getElementById(category).style.display = 'block';
+        }
+
+        function showCategories() {
+            document.querySelectorAll('.menu-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.querySelector('.category-selection').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
